@@ -1,0 +1,118 @@
+@Import Url('Https://Fonts.Googleapis.Com/Css?Family=Muli&Display=Swap');
+
+:Root {
+    --Line-Border-Fill: #3498db;
+    --Line-Border-Empty: #E0e0e0;
+}
+
+* {
+    Box-Sizing: Border-Box;
+    
+}
+
+html{
+    background-image: url(bgpro.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+Body {
+    /* background-image: url(bgpro.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain; */
+    Font-Family: 'Muli', Sans-Serif;
+    display: contents;
+    Align-Items: Center;
+    Justify-Content: Center;
+    Height: 100vh;
+    Margin: 0;
+}
+
+
+
+.Container {
+    Text-Align: Center;
+}
+
+.Progress-Container {
+    Display: Flex;
+    Justify-Content: Space-Between;
+    Position: Relative;
+    Margin-Bottom: 30px;
+    Max-Width: 100%;
+    Width: 350px;
+}
+
+.Progress-Container::Before {
+    Content: '';
+    Background-Color: Var(--Line-Border-Empty);
+    Position: Absolute;
+    Top: 50%;
+    Left: 0;
+    Transform: TranslateY(-50%);
+    Height: 4px;
+    Width: 100%;
+    Z-Index: -1;
+}
+
+.Progress {
+    Background-Color: Var(--Line-Border-Fill);
+    Position: Absolute;
+    Top: 50%;
+    Left: 0;
+    Transform: TranslateY(-50%);
+    Height: 4px;
+    Width: 0%;
+    Z-Index: -1;
+    Transition: 0.4s Ease;
+}
+
+.Circle {
+    Background-Color: #Fff;
+    Color: rgb(0, 0, 0);
+    Border-Radius: 50%;
+    Height: 30px;
+    Width: 30px;
+    Display: center;
+    Align-Items: Center;
+    Justify-Content: Center;
+    Border: 3px Solid Var(--Line-Border-Empty);
+    Transition: 0.4s Ease;
+}
+
+.Circle.Active {
+    Border-Color: Var(--Line-Border-Fill);
+}
+
+.Btn {
+    Background-Color: Var(--Line-Border-Fill);
+    Color: #Fff;
+    Border: 0;
+    Border-Radius: 6px;
+    Cursor: Pointer;
+    Font-Family: Inherit;
+    Padding: 8px 30px;
+    Margin: 5px;
+    Font-Size: 14px;
+}
+
+.Btn:active {
+    Transform: Scale(0.98);
+}
+
+.Btn:focus {
+    Outline: 0;
+}
+
+.Btn:disabled {
+    Background-Color: Var(--Line-Border-Empty);
+    Cursor: Not-Allowed;
+}
+
+.site-footer{
+    background-color: #333;
+    color: #fff;
+    margin-top: 15px;
+}
